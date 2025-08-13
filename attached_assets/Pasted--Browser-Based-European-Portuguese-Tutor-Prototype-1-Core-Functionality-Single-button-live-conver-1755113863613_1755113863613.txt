@@ -1,0 +1,78 @@
+ Browser-Based European Portuguese Tutor Prototype
+1. Core Functionality
+Single-button live conversation:
+
+One click starts the real-time voice session with the AI tutor.
+
+One click ends the session.
+
+No extra UI modules for products or info — the focus is purely on the voice tutor.
+
+Hands-free operation by default:
+
+Once a session starts, the conversation must flow naturally without pressing the microphone each time.
+
+Continuous listening mode should be enabled automatically (no need for toggles or extra clicks).
+
+True conversational AI (unscripted dialogue):
+
+AI should understand and respond to spontaneous, off-script questions (e.g., “How do I say orange juice in Portuguese?”) with the correct answer — not a fixed scripted flow.
+
+Maintain context during the ongoing conversation.
+
+2. Web Client Features
+Must work on desktop and mobile browsers.
+
+Browser support: Chrome, Edge, Safari, Firefox (latest versions).
+
+No Internet Explorer support.
+
+Safari iOS 12+ or Chrome on Android recommended for best mic support.
+
+Microphone access: User permission must be requested per browser rules.
+
+No storage: No backend recording, no transcript saving, no chat logs.
+
+3. Technology Requirements
+AI Model:
+
+Must use Gemini 2.5 Native Live for both STT (Speech-to-Text) & TTS (Text-to-Speech).
+
+Client doubts it’s currently used — so must verify and show proof (logs or UI note).
+
+Tech stack: Node.js backend + LiveKit for real-time audio streaming + Gemini APIs.
+
+No database or external storage needed.
+
+Should handle up to 30 concurrent sessions reliably.
+
+Audio/voice quality:
+
+Match or exceed the natural, fluent quality of the sample video the client provided.
+
+Correct accents for English and authentic European Portuguese.
+
+4. Custom Prompt
+Prompt to be pre-set in code at session start (not user-editable):
+
+text
+You are a friendly, English-speaking Portuguese tutor from Portugal. You only use authentic European Portuguese phrases—never Brazilian Portuguese. You teach the user how to greet people and say common words and expressions. Start with greetings like “Bom dia,” “Boa tarde,” and “Boa noite,” and then teach everyday vocabulary like “sumo de laranja” for orange juice. Speak naturally, give examples in both Portuguese and English, and encourage the user to repeat after you. Correct pronunciation gently and keep the conversation engaging.
+5. Performance Expectations
+Real-time responsiveness: Low latency for both voice recognition and speech playback.
+
+Seamless conversation: AI should listen and talk like a human — no long gaps, no repeated permission prompts, no mic re-clicking.
+
+6. Client Feedback to Address
+Current prototype is not like the example video provided.
+
+Voice quality is worse than in the example — needs improvement.
+
+Must remove the need to press the microphone each time — full fluid conversation required.
+
+AI must handle unscripted questions naturally — avoid rigid scripted answers.
+
+Must confirm Gemini 2.5 Native Live is used (current uncertainty from client).
+
+If these aren’t delivered, client will not continue discussion.
+
+✅ In summary: Build a browser-based, hands-free, real-time, context-aware AI tutor using Gemini 2.5 Native Live + LiveKit + Node.js, with natural high-quality audio and dynamic, unscripted conversational ability
